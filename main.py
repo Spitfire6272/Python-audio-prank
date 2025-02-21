@@ -1,9 +1,9 @@
 import subprocess
 import ctypes
 import time
-mp3_file = "ping.mp3"#replace with your preferred mp3 file. 
-vlc_path = r"C:\Program Files (x86)\VideoLAN\VLC\vlc.exe"#path to my VLC. Replace as required.
-command = [vlc_path, "--intf", "dummy", mp3_file]
+mp3 = "ping.mp3"#replace with your preferred mp3 file.
+vlc_path = "C:\Program Files (x86)\VideoLAN\VLC\vlc.exe"#path to my VLC. Replace as required. if broken, put r before "c:"
+command = [vlc_path, "--intf", "dummy", mp3]
 subprocess.Popen(command, creationflags=subprocess.CREATE_NEW_PROCESS_GROUP)
 def maxxer():
     APPCOMMAND_VOLUME_UP = 0xA0000
